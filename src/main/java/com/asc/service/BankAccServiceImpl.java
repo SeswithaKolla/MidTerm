@@ -35,10 +35,10 @@ public class BankAccServiceImpl implements BankcAccountService {
 	}
 
 	@Override
-	public BankAccount FindById(int id) {
+	public BankAccount FindByAccNum(int AccNum) {
 		// TODO Auto-generated method stub
 		BankAccountDao bankAccountdao = new BankAccountDaoImpl();
-		return bankAccountdao.FindById(id);
+		return bankAccountdao.FindByAccNum(AccNum);
 	}
 
 	@Override

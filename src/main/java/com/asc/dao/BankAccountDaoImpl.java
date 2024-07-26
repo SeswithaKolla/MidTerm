@@ -58,11 +58,11 @@ public class BankAccountDaoImpl implements BankAccountDao{
 	}
 
 	@Override
-	public BankAccount FindById(int id) {
+	public BankAccount FindByAccNum(int AccNum) {
 		// TODO Auto-generated method stub
 		EntityManager em = EntityUtil.getEntityManager();
-		BankAccount b = em.find(BankAccount.class, id);
-		if(b==null) System.out.println("No Account Available with this "+id);
+		BankAccount b = em.find(BankAccount.class, AccNum);
+		if(b==null) System.out.println("No Account Available with this "+AccNum);
 		return b;
 	}
 

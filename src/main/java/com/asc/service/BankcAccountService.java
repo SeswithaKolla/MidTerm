@@ -7,7 +7,7 @@ public interface BankcAccountService {
 	public void updateAccount(int id,double balance);
 	public void deleteAccount(int id);
 	public void DisplayAll();
-	public BankAccount FindById(int id);
+	public BankAccount FindByAccNum(int AccNum);
 	public BankAccount FindByName(String name);
 	public void FindByBranchCode(int branchCode);
 	public void DisplayGroup();

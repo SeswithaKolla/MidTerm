@@ -17,7 +17,7 @@ public class App
 		System.out.println("2.Update Account");
 		System.out.println("3.Delete Account");
 		System.out.println("4.Display All Accounts");
-		System.out.println("5.Finding By Id");
+		System.out.println("5.Finding By Account Number");
 		System.out.println("6.Finding By Name");
 		System.out.println("7.Finding By BranchCode");
 		System.out.println("8.Display Using Group By");
@@ -37,7 +37,7 @@ public class App
 			DisplayAll();
 			break;
 		case 5:
-			FindById();
+			FindByAccNum();
 			break;
 		case 6:
 			FindByName();
@@ -101,12 +101,12 @@ public class App
     	BankcAccountService BAservice = new BankAccServiceImpl();
     	BAservice.DisplayAll();
     }
-    public static void FindById() {
+    public static void FindByAccNum() {
     	Scanner sc = new Scanner(System.in);
     	System.out.println("Enter the Account Id:");
     	int acctno= sc.nextInt();
     	BankcAccountService BAservice = new BankAccServiceImpl();
-    	BAservice.FindById(acctno);
+    	System.out.println(BAservice.FindByAccNum(acctno));
     }
     public static void FindByName() {
     	Scanner sc = new Scanner(System.in);
